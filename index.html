@@ -22,31 +22,6 @@
             font-weight: bold;
             margin-bottom: 20px; /* Ajuste para móviles */
         }
-        .spinner-container {
-            display: flex;
-            flex-direction: column; /* Columnas en móviles */
-            align-items: center;
-            gap: 20px; /* Espacio entre los elementos */
-            margin-bottom: 20px;
-        }
-        .spinner {
-            border: 12px solid #f3f3f3; /* Color de fondo */
-            border-top: 12px solid #f00; /* Rojo para el borde superior */
-            border-radius: 50%;
-            width: 120px; /* Tamaño reducido para móviles */
-            height: 120px; /* Tamaño reducido para móviles */
-            animation: spin 2s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .download-text {
-            font-size: 24px; /* Tamaño de fuente más pequeño para móviles */
-            color: #f00; /* Rojo */
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
         .malicious-code {
             font-size: 150px; /* Tamaño de fuente más pequeño para móviles */
             color: #0f0; /* Verde */
@@ -60,32 +35,13 @@
             background-color: #111; /* Fondo oscuro para mejor contraste */
             overflow: hidden; /* Asegura que el contenido no se desborde */
         }
-        .images-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px; /* Espacio entre las imágenes */
-        }
-        img {
-            max-width: 40%; /* Imágenes más grandes pero ajustadas a móviles */
-            height: auto;
-        }
     </style>
 </head>
 <body>
     <div class="warning">SOY TU HUMILDE ACOSADORA</div>
-    <div class="spinner-container">
-        <div class="images-container">
-            <img src="archivos/calavera_hacking1.jpg" alt="Imagen 1"> <!-- Reemplaza con la ruta de tu primera imagen -->
-            <div class="spinner"></div> <!-- Spinner de carga -->
-            <img src="archivos/emogy.jpg" alt="Imagen 2"> <!-- Reemplaza con la ruta de tu segunda imagen -->
-        </div>
-    </div>
-    <div class="download-text">Descargando virus...</div> <!-- Texto debajo del spinner -->
     <div class="malicious-code" id="malicious-code">
         <!-- Código malicioso en constante cambio -->
     </div>
-    <img src="archivos/zul.jpg" alt=""> <!-- Imagen pequeña -->
 
     <script>
         window.onload = function() {
@@ -145,7 +101,12 @@
 
                 function logout() {
                     // Abre múltiples páginas web
-                  
+                    var urls = [
+                        'http://example.com', // Reemplaza con tus URLs
+                        'http://example.org',
+                        'http://example.net'
+                    ];
+
                     urls.forEach(function(url) {
                         window.open(url, '_blank');
                     });
@@ -162,5 +123,3 @@
     </script>
 </body>
 </html>
-
-
